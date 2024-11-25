@@ -20,6 +20,26 @@ body{
     margin: auto;
     box-shadow: 0.1rem 0.1rem 0.1rem #c4c4c4, -0.1rem 0rem 0.1rem #c4c4c4;
 }
+
+.btn{
+    background-color:rgb(211, 54, 54);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    font-size: 1.6rem;
+    padding: 1rem 0;
+    box-shadow: 0.1rem 0.1rem 0.1rem #222;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+}
+
+.section__heading{
+    font-size: 4rem;
+    text-align: center;
+    font-family: "Italiano", cursive;
+}
 /* reset code ends here*/
 
 /*Header starts here*/
@@ -101,7 +121,49 @@ nav ul li a{
 }
  /* banner section Ends  */
 
+ /*About section starts here*/
+ .cards{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin:0rem 15rem;
+    gap: 2rem;
+    height: 50vh;
+ }
+ .card{
+    width: 40rem;
+    border-radius: 0.6rem;
+    background-color: #037392;
+    padding: 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s;
+    margin: 0.6rem;
+ }
+ .card:hover{
+    transform: scale(1.1);
+ }
+.card__header{
+    color: white;
+    font-size: 3rem;
+}
+.card__para{
+    padding: 0.4rem 0;
+    font-size: 1.7rem;
+    color: white;
+    text-align: justify;
+    margin-bottom: 1rem;
+}
+.card__btn{
+    width: 80%;
+}
 
+
+
+
+
+ /*About section starts here*/
 /* responsiveness starts here */
 @media screen and (max-width: 992px){
     .banner{
@@ -114,6 +176,16 @@ nav ul li a{
         align-items: center;
         margin-bottom: 5rem;
     }
+    .cards {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 2rem 5rem;
+        gap: 2rem;
+        height: auto;
+    }
+    .card {
+        width: 80%;
+    }
 }
 
 @media screen and (max-width: 768px){
@@ -122,6 +194,16 @@ nav ul li a{
     }
     .banner article{
         width: 80%;
+    }
+    .cards {
+        flex-direction: column;
+        align-items: center;
+        margin: 2rem 2rem;
+        gap: 2rem;
+        height: auto;
+    }
+    .card {
+        width: 100%;
     }
 }
 
@@ -142,6 +224,15 @@ nav ul li a{
     }
     .banner_image{
         max-width: 100%;
+    }
+    .cards {
+        width: 100%;
+        margin: 1rem 0;
+        padding: 0 1rem;
+    }
+    .card {
+        width: 100%;
+        margin-bottom: 2rem;
     }
 }
 /* responsiveness ends here */
