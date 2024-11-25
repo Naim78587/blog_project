@@ -1,4 +1,8 @@
 /* reset code starts here*/
+:root{
+    --transition: all 0.3s;
+    --scale: scale(1.1)
+}
 *{
     margin: 0;
     padding: 0;
@@ -61,7 +65,7 @@ header{
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
     padding: .5rem;
-    transition: all 0.4s;
+    transition: var(--transition);
 }
 .logo:hover{
     color: black;
@@ -72,7 +76,7 @@ nav ul{
     gap: 4rem;
 }
 .nav_link{
-    transition: all 0.4s;
+    transition: all var(--transition);
     padding: 1rem;
 }
 .nav_link:hover{
@@ -138,11 +142,11 @@ nav ul li a{
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: all 0.3s;
+    transition: var(--transition);
     margin: 0.6rem;
  }
  .card:hover{
-    transform: scale(1.1);
+    transform: var(--scale);
  }
 .card__header{
     color: white;
@@ -158,12 +162,50 @@ nav ul li a{
 .card__btn{
     width: 80%;
 }
-
-
-
-
-
  /*About section starts here*/
+
+ /*Archive section starts here*/
+.archives__container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2rem;
+    border-top: 0.1rem solid;
+    border-bottom: 0.1rem solid;
+}
+
+.archives__lists {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.archives__list {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.archives__img {
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 0.6rem;
+    transition: var(--transition);
+    object-fit: contain;
+}
+
+.archives__img:hover {
+    transform: var(--scale); 
+}
+ /*Archive section ends here*/
+
+
+
 /* responsiveness starts here */
 @media screen and (max-width: 992px){
     .banner{
@@ -205,6 +247,9 @@ nav ul li a{
     .card {
         width: 100%;
     }
+    .archives{
+        min-height: auto;
+    }
 }
 
 @media screen and (max-width: 600px){
@@ -233,6 +278,11 @@ nav ul li a{
     .card {
         width: 100%;
         margin-bottom: 2rem;
+    }
+    .archives__lists{
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 3rem;
     }
 }
 /* responsiveness ends here */
