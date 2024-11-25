@@ -16,7 +16,6 @@ html{
 }
 body{
     background-color: #fff;
-    
     max-width: 100%;
     margin: auto;
     box-shadow: 0.1rem 0.1rem 0.1rem #c4c4c4, -0.1rem 0rem 0.1rem #c4c4c4;
@@ -42,6 +41,11 @@ header{
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
     padding: .5rem;
+    transition: all 0.4s;
+}
+.logo:hover{
+    color: black;
+    border-color: black;
 }
 nav ul{
     display: flex;
@@ -62,3 +66,82 @@ nav ul li a{
     font-size: 2rem;
 }
 /*Header Ends here*/
+ /* banner section starts  */
+ .banner{
+    padding: 5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 95vh;
+ }
+ .banner_image{
+    width: 55rem;
+    height: 55rem;
+    border: 0.3rem solid;
+ }
+.banner article{
+    flex-basis: 50%;
+    margin: 1rem;
+}
+.banner aside{
+    flex-basis: 50%;
+    text-align: center;
+}
+.banner_heading{
+    display: inline-block;
+    padding: 1rem;
+    background-color: #1e81b0;
+    color: white;
+    margin-bottom: 1.5rem;
+    font-size: 2.3rem;
+}
+.banner_para{
+    font-size: 2.8rem;
+    text-align: justify;
+}
+ /* banner section Ends  */
+
+
+/* responsiveness starts here */
+@media screen and (max-width: 992px){
+    .banner{
+        flex-direction: column;
+    }
+    .banner article{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 5rem;
+    }
+}
+
+@media screen and (max-width: 768px){
+    html{
+        font-size: 55.5%;
+    }
+    .banner article{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    html{
+        font-size: 48.5%;
+    }
+    nav ul{
+        flex-direction: column;
+        padding-left: 2.5rem;
+    }
+    .banner{
+        min-height: auto;
+
+    }
+    .banner article{
+        width: 90%;
+    }
+    .banner_image{
+        max-width: 100%;
+    }
+}
+/* responsiveness ends here */
