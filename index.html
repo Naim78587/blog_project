@@ -19,20 +19,21 @@
         <figure class="logo">
             <h2 class="section_heading">Naim's Blog</h2>
         </figure>
-        <nav id="manu-icon">
+        <i class="fas fa-bars fa-4x hidden" id="manu__icon2"></i>
+        <nav id="manu-icon" class="hidden">
             <ul>
                 <li><a href="#"class="nav_link">Home</a></li>
-                <li><a href="#"class="nav_link">About</a></li>
-                <li><a href="#"class="nav_link">Archieves</a></li>
-                <li><a href="#"class="nav_link">Blog Posts</a></li>
-                <li><a href="#"class="nav_link">Contact</a></li>
+                <li><a href="#about"class="nav_link">About</a></li>
+                <li><a href="#archives"class="nav_link">Archieves</a></li>
+                <li><a href="#blog-posts"class="nav_link">Blog Posts</a></li>
+                <li><a href="#contact"class="nav_link">Contact</a></li>
             </ul>
         </nav>
      </header>
     <!-- Header ends here -->
     <!-- blog banner starts  -->
      <main>
-        <section class="banner">
+        <section class="banner" id="banner">
             <article>
                 <h1 class="banner_heading">Web Development</h1>
                 <p class="banner_para">
@@ -48,7 +49,7 @@
         </section>
     <!-- blog banner Ends  -->
     <!-- About Section starts -->
-     <section class="about">
+     <section class="about" id="about">
         <h2 class="section__heading">Front End Design & Development</h2>
         <div class="cards">
             <div class="card">
@@ -82,7 +83,7 @@
      </section>
     <!-- About Section ends -->
      <!-- Archive section starts here  -->
-      <section class="archives">
+      <section class="archives" id="archives">
         <h2 class="section__heading">Commonly Used Front-End Frameworks</h2>
         <div class="archives__container">
             <ul class="archives__lists">
@@ -95,7 +96,7 @@
       </section>
      <!-- Archive section ends here  -->
       <!-- blog post section starts here  -->
-       <section class="blog-posts">
+       <section class="blog-posts" id="blog-posts">
         <h2 class="section__heading blog">Blog Posts</h2>
         <!-- blog post 1  -->
         <div class="blog-posts">
@@ -156,7 +157,7 @@
        </section>
       <!-- blog post section ends here  -->
        <!-- contact section starts here  -->
-       <section class="contact-section section__heading">
+       <section class="contact-section section__heading" id="contact">
         <h2 class="section__heading">Contact Me</h2>
         <form action="">
             <div class="form-control">
@@ -178,8 +179,28 @@
        </section>
        <!-- contact section ends here  -->
     </main>
-     <footer>
-        This is footer
+     <footer class="footer">
+        <p class="copyright-text">
+            Copyright &copy; by Naim Ahmed. All rights reserved
+        </p>
+        <nav class="footer__nav">
+            <a href="#banner" class="footer_link">
+                <i class="fa fa-home footer_icon home"></i>
+            </a>
+            <a href="https://www.facebook.com/NaimAhmedEmon221B/" target="_blank" class="footer_link">
+                <i class="fab fa-facebook footer_icon facebook"></i>
+            </a>
+            <a href="https://www.youtube.com/@naim_ahmed_emon" target="_blank" class="footer_link">
+                <i class="fab fa-youtube footer_icon youtube"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/naimahmedemon/" target="_blank" class="footer_link">
+                <i class="fab fa-linkedin footer_icon linkedin"></i>
+            </a>
+            <a href="https://github.com/Naim78587" target="_blank" class="footer_link">
+                <i class="fab fa-github footer_icon github"></i>
+            </a>
+        </nav>
      </footer>
+     <script src="index.js"></script>
 </body>
 </html>
